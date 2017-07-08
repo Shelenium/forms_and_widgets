@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <title>UI Kit Task</title>
+    <link href="css/ui-kit.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/ui_kit_icon.png">
+    <meta charset=utf-8>
+    <meta name="description" content="UI Kit Task">
+    <meta name="keywords" content="Semantic, Widget, Html, Css, JavaScript">
+    <meta name="author" content="Elena Shokhan Shelenium">
+  </head>
+
+  <body>
+
+    <!------------------------  Widget 1 Calendar  -------------------------->
+
+    <div class="widget calendar">
+
+      <header>
+        <span class = "icon-arrow left-arrow"></span>
+        <span class = "calendar-month-name"><time datetime = "2014-05">May 2014</time></span>
+        <span class = "icon-arrow right-arrow"></span>
+      </header>
+      
+      <main>
+        <table>
+          <tr>
+            <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+          </tr>
+          <tr>
+            <td class = "day-non-current-month">29</td><td class = "day-non-current-month">30</td><td>1</td><td>2</td><td class = "day-today">3</td><td>4</td><td>5</td>
+          </tr>
+          <tr>
+            <td>6</td><td class = "day-event">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+          </tr>
+          <tr>
+            <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+          </tr>
+          <tr>
+            <td>20</td><td>21</td><td>22</td><td class = "day-event">23</td><td>24</td><td>25</td><td>26</td>
+          </tr>
+          <tr>
+            <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td class = "day-non-current-month">1</td><td class = "day-non-current-month">2</td>
+          </tr>
+        </table>
+        <button>Add event</button>
+      </main>
+
+    </div>
+
+        <!------------------------  Widget 2 Select Fly  -------------------------->
+
+    <div class="widget select-fly">
+      <header>
+        <label>
+          <h2>Hotel Relais</h2>
+          <h4><span class = "icon-map-small"></span>Paris, France</h4>
+        </label>
+      </header>
+      <main>
+        <form>
+
+          <ul>
+            <li>
+              <label>Check in</label>
+              <input class = "common-input-style input-fly-date" type="text" placeholder="9 July, 2016"><input type="button" value="">
+            </li>
+            <li>
+              <label>Check out</label>
+              <input class = "common-input-style input-fly-date" type="text" placeholder="16 July, 2016"><input type="button" value="">
+            </li>
+            <li>
+              <input id = "input-flexible-dates-checkbox" class = "input-flexible-dates-checkbox no-shown" type="checkbox" checked>
+              <label for = "input-flexible-dates-checkbox" class = "label-flexible-dates-checkbox">Flexible dates</label>
+            </li>
+            <li class = "how-many-adults-children">
+              <label>Adults</label>
+              <select id = "button-how-many-adults" class = "common-input-style">
+                <option>1</option>
+                 <option selected>2</option>
+                 <option>3</option>
+                 <option>4</option>
+              </select><input type="button" for="button-how-many-adults" value="">
+            </li>
+             <li class = "how-many-adults-children">
+              <label>Children</label>
+              <select id = "button-how-many-children" class = "common-input-style">
+                <option selected>1</option>
+                 <option>2</option>
+                 <option>3</option>
+                 <option>4</option>
+              </select><input type="button" for="button-how-many-children" value="">
+            </li>
+          </ul>
+
+          <button type = "submit"><span class = "icon-magnificate"></span>search rooms</button>
+        </form>
+
+      </main>
+    </div>
+
+
+            <!------------------------  Widget 3 Destination  -------------------------->
+
+    <div class = "widget destination">
+      <nav>
+        <ul>
+          <li class = "active"> <span class = "icon-eye"></span></li>
+          <li><span class = "icon-map"></span></li>
+          <li><span class = "icon-star"></span></li>
+        </ul>
+      </nav><!--
+   --><article>
+          <h3>My most favourite place in the world</h3>
+          <h5><span>154</span>&nbspReviews</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin.</p>
+          <p class = "text-read-more">Read more</p>
+      </article><!--
+   --><figure>
+        <label>
+          <span><span class = "icon-comment"></span>752</span>
+          <span><span class = "icon-heart"></span>2709</span>
+        </label>
+      </figure>
+    </div>
+
+                <!------------------------  Widget 4 Diagramm  -------------------------->
+     
+     <div class = "widget diagramm">
+      <section>
+         <ul>
+          <li>30</li>
+          <li>20</li>
+          <li>10</li>
+          <li>0</li>
+        </ul>
+      </section>
+      <figure>
+        <ul>
+          <li><div class = "mon"> <span class="tooltip tooltip-body">7</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Mon</p></li><!--
+       --><li><div class = "tue"> <span class="tooltip tooltip-body">9</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Tues</p></li><!--
+       --><li><div class = "wed"> <span class="tooltip tooltip-body">17</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Wed</p></li><!--
+       --><li><div class = "thu"> <span class="tooltip tooltip-body">22</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Thu</p></li><!--
+       --><li><div class = "fri"> <span class="tooltip tooltip-body">18</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Fri</p></li><!--
+       --><li><div class = "sat"> <span class="tooltip tooltip-body">24</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Sat</p></li><!--
+       --><li><div class = "sun"> <span class="tooltip tooltip-body">20.3</span>
+                                  <span class="tooltip tooltip-triangle"></span>
+              </div><p>Sun</p></li>
+        </ul>
+      </figure>
+    </div>
+
+
+               <!------------------------  Widget 5 Mail  -------------------------->
+        
+    <div class="widget mail">
+      <main>
+        <form>
+          <input id="input-email" class="input-email no-shown" type="email" placeholder="To" value="rick.james@mail.com" multiple><!--
+       --><label for="input-email" class = "common-input-style label-input-email">
+            <span id = "no-email-in-input" class = "no-shown">To</span>
+            <span class="span-label-input-email">rick.james@mail.com <a class="email-close" id="email-close">&nbspx</a></span>
+          </label><!--
+        --><span for="input-email" class="icon-input-widget-5 icon-email"></span>
+
+          <input id="input-file" class="input-file no-shown" type="file" multiple><!--
+       --><label for="input-file" class="common-input-style label-input-file">Subject</label><!--
+       --><span for="input-file" class="icon-input-widget-5 icon-file"></span>
+
+          <textarea placeholder="Message" class="common-input-style input-message-email"></textarea>
+
+          <section class="right-align">
+            <button>Send</button>
+          </section>
+        </form>
+      </main>
+    </div>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,977 @@
+  /*      -----------------------fonts --------------------------*/
+
+@font-face {
+  font-family: Gotham SSm;
+  src: url('GothamSSm/GothamSSm-Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gotham SSm;
+  src: url('GothamSSm/GothamSSm-Book.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gotham SSm;
+  src: url('GothamSSm/GothamSSm-Medium.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gotham SSm;
+  src: url('GothamSSm/GothamSSm-Bold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/*      -----------------------common --------------------------*/
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d9d9d9;
+  font: 400 0.8rem/2rem 'Gotham SSm', sans-serif;
+  color: #666;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+span {
+  display: inline-block;
+}
+
+.widget {
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 5px 0 #666;
+  box-shadow: 0 1px 5px 0 #666;
+  padding: 0;
+}
+
+header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  padding: 12px 24px 20px 24px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  min-height: 58px;
+  font: 400 1.5rem/2.1rem 'Gotham SSm', sans-serif;
+  letter-spacing: 0.5px;
+  background-color: #fb6362;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 2px 0 #666;
+  box-shadow: 0 2px 2px 0 #666;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+button:hover {
+  -webkit-box-shadow: inset 0 2px 2px 0 #666;
+  box-shadow: inset 0 2px 2px 0 #666;
+}
+
+table {
+  font-size: 1.4rem;
+  line-height: 3.9rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
+
+th,
+td {
+  width: 39px;
+  padding: 0;
+  cursor: default;
+}
+
+td {
+  font-weight: 400;
+}
+
+td:hover,
+th {
+  font-weight: 500;
+}
+
+/*      -----------------------Widget 1 Calendar --------------------------*/
+
+.calendar {
+  width: 346px;
+  min-height: 427px;
+}
+
+.calendar header {
+  min-height: 62px;
+  background-color: #404a58;
+  text-align: center;
+  padding-top: 14px;
+}
+
+.icon-arrow  {
+  width: 8px;
+  height: 12px;
+  margin: 0 20px 1px 20px;
+  cursor: pointer;
+}
+
+.calendar-month-name {
+  width: 210px;
+  font: 400 1.7rem/3.57rem 'Gotham SSm', sans-serif;
+  color: white;
+  cursor: default;
+}
+
+.left-arrow {
+  background: url("../images/arrows.png") 0 0;
+}
+
+.left-arrow:hover {
+  background: url("../images/arrows.png") 0 12px;
+}
+
+.right-arrow {
+  background: url("../images/arrows.png") -8px 0;
+}
+
+.right-arrow:hover {
+  background: url("../images/arrows.png") -8px 12px;
+}
+
+.day-non-current-month {
+  color: #c5c5c5;
+}
+
+.day-today {
+  border-radius: 20px;
+  background-color: #fb6362;
+  color: white;
+  font-weight: 700;
+}
+
+.day-event {
+  color: #fb6362;
+  font-weight: 700;
+}
+
+/*      ----------------------- Widget 2 Select Fly --------------------------*/
+
+.select-fly {
+  width: 346px;
+  min-height: 626px;
+}
+
+.select-fly header {
+  height: 185px;
+  background: url("../images/paris.jpg");
+  position: relative;
+  padding: 0 24px;
+}
+
+.select-fly header label {
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+h2 {
+  font: 400 2.5rem/2.6rem 'Gotham SSm', sans-serif;
+  color: white;
+  margin: 0;
+  letter-spacing: -0.4px;
+}
+
+h4 {
+  font: 300 1.4rem/2.6rem 'Gotham SSm', sans-serif;
+  color: white;
+  margin: 0 0 13px 0;
+  letter-spacing: -0.2px;
+}
+
+.select-fly header label:hover h4,
+.select-fly header label:hover h2,
+.email-close:hover {
+  color: #fb6362;
+}
+
+.icon-map-small {
+  width: 12px;
+  height: 17px;
+  background: url("../images/map_small.png") 0 0;
+  margin: 0 5px -2px 2px;
+}
+
+.select-fly header label:hover .icon-map-small {
+  background: url("../images/map_small.png") 0 17px;
+}
+
+.select-fly form label {
+  font: 400 1.4rem/2.6rem 'Gotham SSm', sans-serif;
+  display: block;
+  margin: 3px 0;
+}
+
+input:not([type="button"]):focus,
+.input-message-email:focus {
+  background-color: white;
+}
+
+input[type="button"] {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  margin: 4px 0 0 -42px;
+  background: no-repeat center url("../images/calendar_white.png") #414b59;
+  cursor: pointer;
+  padding: 0;
+}
+
+.how-many-adults-children input[type="button"] {
+  background: no-repeat center url("../images/triangle.png") #414b59;
+}
+
+.how-many-adults-children {
+  width: 46.8%;
+  display: inline-block;
+}
+
+.how-many-adults-children+.how-many-adults-children {
+  margin-left: 5.4%;
+}
+
+input[type="button"]:hover,
+nav .active {
+  background-color: #fb6362;
+}
+
+.label-flexible-dates-checkbox:before,
+.common-input-style {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: 0 1px 2px 0 #666 inset;
+  box-shadow: 0 1px 2px 0 #666 inset;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  cursor: text;
+  padding: 2px 0 0 14px;
+  min-height: 44px;
+}
+
+.no-shown {
+  display: none;
+}
+
+.label-flexible-dates-checkbox:before {
+  content: "";
+  width: 23px;
+  height: 22px;
+  min-height: 22px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 12px -6px 0;
+  border-radius: 4px;
+}
+
+.select-fly form label.label-flexible-dates-checkbox {
+  cursor: pointer;
+  margin: -3px 0;
+}
+
+.input-flexible-dates-checkbox:checked+.label-flexible-dates-checkbox:before {
+  background: no-repeat center url("../images/checked.png") #f4f4f4;
+}
+
+
+/*      -----------------------placeholder style--------------------------*/
+
+.label-input-file {
+  font: 300 1.4rem/2rem 'Gotham SSm', sans-serif;
+  color: #999898;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  font: 300 1.4rem/2rem 'Gotham SSm', sans-serif;
+  color: #999898;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font: 300 1.4rem/2rem 'Gotham SSm', sans-serif;
+  color: #999898;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font: 300 1.4rem/2rem 'Gotham SSm', sans-serif;
+  color: #999898;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font: 300 1.4rem/2rem 'Gotham SSm', sans-serif;
+  color: #999898;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font: 300 1.4rem/2rem 'Gotham SSm', sans-serif;
+  color: #999898;
+}
+
+
+
+select {
+  width: 100%;
+  height: 44px;
+  padding: 6px 0 0 14px;
+  cursor: pointer;
+  font: 300 1.6rem/2.6rem 'Gotham SSm', sans-serif;
+  color: #414b59;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select-fly ul,
+.destination ul,
+.diagramm ul {
+  padding: 0;
+  list-style: none;
+}
+
+.select-fly ul {
+  margin-bottom: 22px;
+}
+
+.destination ul {
+  margin: 0;
+}
+
+.select-fly li {
+  margin-bottom: 18px;
+}
+
+.icon-magnificate {
+  width: 22px;
+  height: 22px;
+  background: url("../images/magnificate.png");
+  margin: 0 10px -5px -6px;
+}
+
+/*      -----------------------Widget 3 Destination--------------------------*/
+
+.destination,
+.diagramm {
+  width: 792px;
+  cursor: default;
+}
+
+nav,
+article,
+.destination figure {
+  display: inline-block;
+  margin: 0;
+  min-height: 340px;
+  vertical-align: top;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+nav {
+  width: 9%;
+  padding: 0;
+  background-color: #404a58;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+nav li {
+  line-height: 112px;
+  border-top: 1px solid #242931;
+}
+
+nav li:first-child {
+  border-top: none;
+}
+
+nav li:hover {
+  -webkit-box-shadow: inset 0 2px 2px 0 #666;
+  box-shadow: inset 0 2px 2px 0 #666;
+}
+
+nav li span {
+  width: 27px;
+  height: 26px;
+  margin-bottom: -12px;
+  background: center center url("../images/sprite_nav.png");
+}
+
+.icon-eye {
+  background-position: 0 0;
+}
+
+.icon-map {
+  background-position: 0 -26px;
+}
+
+.icon-star {
+  background-position: 0 -52px;
+}
+
+article {
+  width: 45%;
+  padding: 26px 46px 30px 34px;
+}
+
+h3 {
+  width: 75%;
+  font: 500 2.1rem/3rem 'Gotham SSm', sans-serif;
+  margin: 0 0 6px 0;
+  color: #4d4d4d;
+  letter-spacing: -0.6px;
+}
+
+h5 {
+  font: 300 1.4rem/2.6rem 'Gotham SSm', sans-serif;
+  letter-spacing: 0.2px;
+  color: #999999;
+  margin: 0 0 24px 0;
+}
+
+h5 > span {
+  color: #4d4d4d;
+}
+
+.destination p {
+  font: 300 1.4rem/2.4rem 'Gotham SSm', sans-serif;
+  letter-spacing: -0.35px;
+  max-height: 10.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 11px 0;
+}
+
+.text-read-more {
+  font-weight: 400;
+  color: #fb6362;
+  cursor: pointer;
+}
+
+.destination figure {
+  width: 46%;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: center center url("../images/destination_picture.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.destination figure:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 38px;
+  border-left: 22px solid white;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+}
+
+.destination figure label {
+  position: absolute;
+  bottom: 12px;
+  right: 20px;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.destination figure label > span {
+  font: 400 1.7rem/4.2rem 'Gotham SSm', sans-serif;
+  margin: 0 8px;
+}
+
+span > span {
+  width: 25px;
+  height: 22px;
+  margin: 0 10px -6px 0;
+}
+
+.icon-comment {
+  background: no-repeat url("../images/sprite_social.png") 0 0;
+}
+
+.icon-heart {
+  background: no-repeat url("../images/sprite_social.png") -25px 0;
+}
+
+/*      ----------------------- Widget 4 Diagramm  --------------------------*/
+
+.diagramm {
+  min-height: 340px;
+  padding: 40px 42px 8px 42px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
+
+.diagramm section li {
+  font: 500 1.2rem/1.7rem 'Gotham SSm', sans-serif;
+  margin-top: 52px;
+  display: block;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: bottom;
+}
+
+.diagramm section li:first-child {
+  margin-top: 0;
+}
+
+.diagramm figure li {
+  font: 500 1.2rem/0.8rem 'Gotham SSm', sans-serif;
+  text-align: center;
+  margin-right: 35px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.diagramm figure div {
+  width: 55px;
+  height: 1px;
+  background-color: #fb6362;
+  border-radius: 2px;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+
+/*      -----------------------animation "growth" block--------------------------*/
+
+
+/*      -----------------------MONDAY--------------------------*/
+
+@-webkit-keyframes growth-MON {
+  100% {
+    height: 49px;
+  }
+}
+
+@-moz-keyframes growth-MON {
+  100% {
+    height: 49px;
+  }
+}
+
+@-o-keyframes growth-MON {
+  100% {
+    height: 49px;
+  }
+}
+
+@keyframes growth-MON {
+  100% {
+    height: 49px;
+  }
+}
+
+
+/*      -----------------------TUESDAY--------------------------*/
+
+@-webkit-keyframes growth-TUE {
+  100% {
+    height: 62px;
+  }
+}
+
+@-moz-keyframes growth-TUE {
+  100% {
+    height: 62px;
+  }
+}
+
+@-o-keyframes growth-TUE {
+  100% {
+    height: 62px;
+  }
+}
+
+@keyframes growth-TUE {
+  100% {
+    height: 62px;
+  }
+}
+
+
+/*      -----------------------WEDNESDAY--------------------------*/
+
+@-webkit-keyframes growth-WED {
+  100% {
+    height: 119px;
+  }
+}
+
+@-moz-keyframes growth-WED {
+  100% {
+    height: 119px;
+  }
+}
+
+@-o-keyframes growth-WED {
+  100% {
+    height: 119px;
+  }
+}
+
+@keyframes growth-WED {
+  100% {
+    height: 119px;
+  }
+}
+
+
+/*      -----------------------THURSDAY--------------------------*/
+
+@-webkit-keyframes growth-THU {
+  100% {
+    height: 158px;
+  }
+}
+
+@-moz-keyframes growth-THU {
+  100% {
+    height: 158px;
+  }
+}
+
+@-o-keyframes growth-THU {
+  100% {
+    height: 158px;
+  }
+}
+
+@keyframes growth-THU {
+  100% {
+    height: 158px;
+  }
+}
+
+
+/*      -----------------------FRIDAY--------------------------*/
+
+@-webkit-keyframes growth-FRI {
+  100% {
+    height: 129px;
+  }
+}
+
+@-moz-keyframes growth-FRI {
+  100% {
+    height: 129px;
+  }
+}
+
+@-o-keyframes growth-FRI {
+  100% {
+    height: 129px;
+  }
+}
+
+@keyframes growth-FRI {
+  100% {
+    height: 129px;
+  }
+}
+
+
+/*      -----------------------SATURDAY--------------------------*/
+
+@-webkit-keyframes growth-SAT {
+  100% {
+    height: 169px;
+  }
+}
+
+@-moz-keyframes growth-SAT {
+  100% {
+    height: 169px;
+  }
+}
+
+@-o-keyframes growth-SAT {
+  100% {
+    height: 169px;
+  }
+}
+
+@keyframes growth-SAT {
+  100% {
+    height: 169px;
+  }
+}
+
+
+/*      -----------------------SUNDAY--------------------------*/
+
+@-webkit-keyframes growth-SUN {
+  100% {
+    height: 143px;
+  }
+}
+
+@-moz-keyframes growth-SUN {
+  100% {
+    height: 143px;
+  }
+}
+
+@-o-keyframes growth-SUN {
+  100% {
+    height: 143px;
+  }
+}
+
+@keyframes growth-SUN {
+  100% {
+    height: 143px;
+  }
+}
+
+
+/*      -----------------------animate "opasity"--------------------------*/
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*      ----------------------- animation assign--------------------------*/
+
+.mon {
+  -webkit-animation: growth-MON 1.5s ease-in-out forwards;
+  /* Safari 4+ */
+  -moz-animation: growth-MON 1.5s ease-in-out forwards;
+  /* Fx 5+ */
+  -o-animation: growth-MON 1.5s ease-in-out forwards;
+  /* Opera 12+ */
+  animation: growth-MON 1.5s ease-in-out forwards;
+  /* IE 10+, Fx 29+ */
+}
+
+.tue {
+  -webkit-animation: growth-TUE 1.5s ease-in-out forwards; /* Safari 4+ */
+  -moz-animation: growth-TUE 1.5s ease-in-out forwards;  /* Fx 5+ */
+  -o-animation: growth-TUE 1.5s ease-in-out forwards; /* Opera 12+ */
+  animation: growth-TUE 1.5s ease-in-out forwards;  /* IE 10+, Fx 29+ */
+}
+
+.wed {
+  -webkit-animation: growth-WED 1.5s ease-in-out forwards;  /* Safari 4+ */
+  -moz-animation: growth-WED 1.5s ease-in-out forwards; /* Fx 5+ */
+  -o-animation: growth-WED 1.5s ease-in-out forwards; /* Opera 12+ */
+  animation: growth-WED 1.5s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+.thu {
+  -webkit-animation: growth-THU 1.5s ease-in-out forwards; /* Safari 4+ */
+  -moz-animation: growth-THU 1.5s ease-in-out forwards; /* Fx 5+ */
+  -o-animation: growth-THU 1.5s ease-in-out forwards; /* Opera 12+ */
+  animation: growth-THU 1.5s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+.fri {
+  -webkit-animation: growth-FRI 1.5s ease-in-out forwards; /* Safari 4+ */
+  -moz-animation: growth-FRI 1.5s ease-in-out forwards; /* Fx 5+ */
+  -o-animation: growth-FRI 1.5s ease-in-out forwards; /* Opera 12+ */
+  animation: growth-FRI 1.5s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+.sat {
+  -webkit-animation: growth-SAT 1.5s ease-in-out forwards; /* Safari 4+ */
+  -moz-animation: growth-SAT 1.5s ease-in-out forwards; /* Fx 5+ */
+  -o-animation: growth-SAT 1.5s ease-in-out forwards; /* Opera 12+ */
+  animation: growth-SAT 1.5s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+.sun {
+  -webkit-animation: growth-SUN 1.5s ease-in-out forwards; /* Safari 4+ */
+  -moz-animation: growth-SUN 1.5s ease-in-out forwards; /* Fx 5+ */
+  -o-animation: growth-SUN 1.5s ease-in-out forwards; /* Opera 12+ */
+  animation: growth-SUN 1.5s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+
+/*      ----------------------- animation assign--------------------------*/
+
+.diagramm figure {
+  position: absolute;
+  bottom: 16px;
+  left: 65px;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+}
+
+.tooltip-triangle {
+  width: 0;
+  height: 0;
+  top: -15px;
+  left: 19px;
+  border-top: 7px solid #404a58;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.tooltip-body {
+  width: 55px;
+  height: 30px;
+  top: -45px;
+  left: 0;
+  background-color: #404a58;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  font: 500 1.2rem/3rem 'Gotham SSm', sans-serif;
+}
+
+.diagramm figure li:hover .tooltip {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-animation: opacity 1s ease-in-out; /* Safari 4+ */
+  -moz-animation: opacity 1s ease-in-out; /* Fx 5+ */
+  -o-animation: opacity 1s ease-in-out; /* Opera 12+ */
+  animation: opacity 1s ease-in-out forwards; /* IE 10+, Fx 29+ */
+}
+
+
+/*      -----------------------Widget 5 Mail --------------------------*/
+
+.mail {
+  width: 380px;
+  min-height: 487px;
+}
+
+.mail button {
+  width: 127px;
+  min-height: 48px;
+  margin-top: 12px;
+}
+
+.label-input-file,
+.label-input-email,
+.icon-file,
+.icon-email,
+.input-message-email {
+  margin: 12px 0;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.icon-input-widget-5 {
+  width: 42px;
+  height: 44px;
+  margin-left: -42px;
+  pointer-events: none;
+  /*  -webkit-appearance: button; */
+}
+
+.icon-email {
+  background: no-repeat center url("../images/add.png");
+}
+
+.icon-file {
+  background: no-repeat center url("../images/file.png");
+  margin-left: -46px;
+}
+
+.label-input-file,
+.label-input-email {
+  display: inline-block;
+}
+
+.label-input-file {
+  padding: 14px 12px;
+}
+
+.label-input-email {
+  padding: 3px 5px;
+}
+
+.input-message-email {
+  padding: 12px 12px;
+  min-height: 224px;
+  resize: none;
+  overflow: auto;
+  font: 300 1.4rem/2.6rem 'Gotham SSm', sans-serif;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.span-label-input-email {
+  font: 300 1.4rem/2.6rem 'Gotham SSm', sans-serif;
+  color: white;
+  background-color: #404a58;
+  padding: 4px 10px;
+  padding-top: relative;
+  cursor: text;
+  margin: 2px 0;
+
+}
+.email-close {
+  cursor: pointer;
+}
+
