@@ -89,7 +89,9 @@ button {
   padding: 0;
 }
 
-button:hover {
+button:hover,
+button:focus
+ {
   -webkit-box-shadow: inset 0 2px 2px 0 #666;
   box-shadow: inset 0 2px 2px 0 #666;
 }
@@ -113,7 +115,7 @@ td {
   font-weight: 400;
 }
 
-td:hover,
+td:hover, td:focus,
 th {
   font-weight: 500;
 }
@@ -150,7 +152,7 @@ th {
   background: url("../images/arrows.png") 0 0;
 }
 
-.left-arrow:hover {
+.left-arrow:hover, .left-arrow:focus {
   background: url("../images/arrows.png") 0 12px;
 }
 
@@ -158,7 +160,7 @@ th {
   background: url("../images/arrows.png") -8px 0;
 }
 
-.right-arrow:hover {
+.right-arrow:hover, .right-arrow:focus {
   background: url("../images/arrows.png") -8px 12px;
 }
 
@@ -212,9 +214,9 @@ h4 {
   letter-spacing: -0.2px;
 }
 
-.select-fly header label:hover h4,
-.select-fly header label:hover h2,
-.email-close:hover {
+.select-fly header label:hover h4, .select-fly header label:focus h4,
+.select-fly header label:hover h2, .select-fly header label:focus h2,
+.email-close:hover, .email-close:focus {
   color: #fb6362;
 }
 
@@ -225,7 +227,8 @@ h4 {
   margin: 0 5px -2px 2px;
 }
 
-.select-fly header label:hover .icon-map-small {
+.select-fly header label:hover .icon-map-small,
+.select-fly header label:focus .icon-map-small {
   background: url("../images/map_small.png") 0 17px;
 }
 
@@ -236,7 +239,8 @@ h4 {
 }
 
 input:not([type="button"]):focus,
-.input-message-email:focus {
+.input-message-email:focus,
+select:focus {
   background-color: white;
 }
 
@@ -263,7 +267,7 @@ input[type="button"] {
   margin-left: 5.4%;
 }
 
-input[type="button"]:hover,
+input[type="button"]:hover, input[type="button"]:focus,
 nav .active {
   background-color: #fb6362;
 }
@@ -433,7 +437,8 @@ nav li:first-child {
   border-top: none;
 }
 
-nav li:hover {
+nav li:hover,
+nav li:focus {
   -webkit-box-shadow: inset 0 2px 2px 0 #666;
   box-shadow: inset 0 2px 2px 0 #666;
 }
@@ -862,6 +867,11 @@ span > span {
   opacity: 0;
 }
 
+.mon:focus+.tooltip {
+  outline: none;
+  outline: 0;
+}
+
 .tooltip-triangle {
   width: 0;
   height: 0;
@@ -884,7 +894,8 @@ span > span {
   font: 500 1.2rem/3rem 'Gotham SSm', sans-serif;
 }
 
-.diagramm figure li:hover .tooltip {
+.diagramm figure li:hover .tooltip,
+.diagramm figure li:focus .tooltip {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
